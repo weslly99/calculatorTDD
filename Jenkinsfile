@@ -1,14 +1,9 @@
 pipeline{
     agent none
     stages {
-        stage('Test'){
-            agent {
-                docker{
-                    image: 'qnib/pytest'
-                }
-            }
+        stage('Hello'){
             steps {
-                sh 'pytest --verbose'
+                echo 'hello world'
             }
         }
     }
