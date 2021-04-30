@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+    # after run "docker-compose up"  run "sudo chown 1000 .jenkins" and
+    # "docker-compose up" again
+    # After install the blue ocean go to > manage plugins > Advance > Upload Plugin and upload the 1.123 plugins 
+    # http://updates.jenkins-ci.org/download/plugins/github-api/
+    #
+    jenkins:
+        container_name: calculator_tdd
+        image: jenkins/jenkins:lts
+        restart: always
+        volumes: 
+            - ./.jenkins:/var/jenkins_home
+        ports: 
+            - 8080:8080
+            - 50000:50000
+        
