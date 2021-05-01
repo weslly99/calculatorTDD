@@ -16,3 +16,7 @@ def test_sub(calc):
 def test_mult(calc):
     result = calc.mult(3,7)
     assert result == 21
+
+def test_div(calc):
+    result = calc.div(9,3)
+    assert result == 3
